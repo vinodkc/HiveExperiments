@@ -44,6 +44,7 @@ save above content to schemafile.txt
 ```cd hiveRandom-master```  
   
 ```python hiveRandom  -s schemafile.txt  -n 10 -d perf  ```
+
  ``` 
 [spark@c120-node2 hiveRandom-master]$ ll  
 total 44  
@@ -53,17 +54,14 @@ total 44
 -rw-r--r-- 1 spark hadoop    68 Nov 19  2018 README.md  
 -rwxr-xr-x 1 spark hadoop 14854 Nov 19  2018 hiveRandom  
 -rw-r--r-- 1 spark hadoop  2034 Dec 20 08:49 schemafile.txt  
-  ```
+```
  
- ```
-beeline -u 'jdbc:hive2://c120-node2.squadron-labs.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2' -n hive -f HiveRandom.hql  ```
+```beeline -u 'jdbc:hive2://c120-node2.squadron-labs.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2' -n hive -f HiveRandom.hql  ```
 
   
-```  
-beeline -u 'jdbc:hive2://c120-node2.squadron-labs.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2' -n hive -e 'select count(*) from perf.t1'  ```
+```beeline -u 'jdbc:hive2://c120-node2.squadron-labs.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2' -n hive -e 'select count(*) from perf.t1'  ```
 
-```
-Connecting to jdbc:hive2://c120-node2.squadron-labs.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2  
+```Connecting to jdbc:hive2://c120-node2.squadron-labs.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2  
 Connected to: Apache Hive (version 1.2.1000.2.6.5.0-292)  
 Driver: Hive JDBC (version 1.2.1000.2.6.5.0-292)  
 Transaction isolation: TRANSACTION_REPEATABLE_READ  

@@ -68,7 +68,7 @@ Transaction isolation: TRANSACTION_REPEATABLE_READ
 +--------+--+  
 |  _c0   |  
 +--------+--+  
-| 10045  |  
+| 11  |  
 +--------+--+  
 1 row selected (0.192 seconds)  
 Beeline version 1.2.1000.2.6.5.0-292 by Apache Hive  

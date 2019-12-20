@@ -39,12 +39,15 @@
 |   'transient_lastDdlTime'='1576831447')                                      |  
 +------------------------------------------------------------------------------+--+  
   ```
-save above content to schemafile.txt  
 
 ```cd hiveRandom-master```  
+ 
+save above content to schemafile.txt  
   
 ```python hiveRandom  -s schemafile.txt  -n 10 -d perf  ```
 
+Note: -n 10 , create 10 records
+      -d perf, database name 
  ``` 
 [spark@c120-node2 hiveRandom-master]$ ll  
 total 44  

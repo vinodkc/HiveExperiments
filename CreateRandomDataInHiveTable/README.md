@@ -78,3 +78,12 @@ Transaction isolation: TRANSACTION_REPEATABLE_READ
 1 row selected (0.192 seconds)  
 Beeline version 1.2.1000.2.6.5.0-292 by Apache Hive  
 Closing: 0: jdbc:hive2://c120-node2.squadron-labs.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2```
+
+
+##Partition table example
+
+CREATE  TABLE t1_part (code string,name string,quantity int, price float) PARTITIONED BY (`productID` int) STORED AS parquet;
+
+save show create table t1_part to schemafile2.txt
+
+python hiveRandom -s schemafile2.txt -n 1000000 -d perf -p 4
